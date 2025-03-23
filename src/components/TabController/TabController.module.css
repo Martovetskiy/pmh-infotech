@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: start;
+}
+
+.tabController{
+    display: flex;
+    justify-content: start;
+    width: 75%;
+}
+
+.tab,
+.tabActive{
+    min-width: 260px;
+    padding: 16px;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(116, 142, 180, .6);
+    box-sizing: border-box;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.14;
+}
+
+.tabController .tab:last-child{
+    border-right: none;
+}
+
+.tab{
+    color: #979797;
+    background-color: #fafafa;
+}
+
+.tabActive{
+    color: #FFFFFF;
+    background-color: #004e94;
+}

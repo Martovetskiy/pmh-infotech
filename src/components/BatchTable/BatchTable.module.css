@@ -1,0 +1,41 @@
+.batchTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.batchTable__head{
+    border: 1px solid rgba(116, 142, 180, .6);
+    color: #979797;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: .89;
+    font-size: 1rem;
+    min-height: 56px;
+    box-sizing: border-box;
+    min-width: 2rem;
+}
+
+.batchTable__head tr th {
+    word-wrap: break-word;
+    word-break: normal;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 400;
+    line-height: 1.22;
+    min-width: 2rem;
+    font-size: 1rem;
+    padding: 11px 5px;
+}
+
+.body__tr{
+    border: 1px solid rgba(116, 142, 180, .6);
+}
+
+.body__tr td {
+    padding: 11px 5px;
+    font-size: 1rem;
+}
