@@ -1,8 +1,8 @@
-import { Certificate } from "../model/Certificate";
+import { Certificate } from "../../model/Certificate.ts";
 import React from "react";
 import styles from './CertificateContainer.module.css';
-import { formatDate } from "../lib/Utils"; // Убедитесь, что здесь нет .ts
-import { GridItem } from "./GridItem/GridItem"; // Убедитесь, что здесь нет .tsx
+import { formatDate } from "../../lib/Utils.ts"; // Убедитесь, что здесь нет .ts
+import { GridItem } from "../../components/GridItem/GridItem.tsx"; // Убедитесь, что здесь нет .tsx
 
 interface CertificateContainerProps {
     certificate: Certificate;

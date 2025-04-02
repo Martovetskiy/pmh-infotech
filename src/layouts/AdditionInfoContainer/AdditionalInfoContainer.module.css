@@ -65,7 +65,7 @@
     column-gap: 57px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 1300px){
     .container__infoGrid {
         grid-template-columns: repeat(1, 1fr);
         max-height: fit-content;

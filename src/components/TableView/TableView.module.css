@@ -1,0 +1,35 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.thead{
+    border: 1px solid rgba(116, 142, 180, .6);
+    font-size: 1rem;
+    line-height: 1.37rem;
+    color: #979797;
+    background-color: #FAFAFA;
+}
+
+.theadRow th{
+    padding: 11px 5px;
+    text-align: start;
+    word-break: normal;
+    font-weight: 400;
+    hyphens: auto;
+}
+
+.tableRow{
+    border: 1px solid rgba(116, 142, 180, .6);
+    font-size: 1.15rem;
+    line-height: 1.37rem;
+    color: #000000
+}
+
+.tableRow td{
+    padding: 11px 5px;
+    text-align: start;
+    word-break: normal;
+    font-weight: 400;
+    hyphens: auto;
+}

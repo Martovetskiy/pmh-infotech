@@ -7,7 +7,7 @@ export interface Product {
     profileStandardGOST: string; // Профильный стандарт
     steelClass: string; // Класс проката
     profileSize: number; // Размер профиля, мм
-    length: number; // Длина, мм
+    length: string; // Длина, мм
     grade: string; // Сорт
     totalPlaces: number; // Количество мест
     netWeight: number; // Масса нетто, т

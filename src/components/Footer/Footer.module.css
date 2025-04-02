@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    background-color: #FAFAFA;
+    padding: 16px;
+}
+
+.download{
+    color: #004e94;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.download:hover{
+    text-decoration: underline 2px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 60%;
+    color: #979797;
+
+}

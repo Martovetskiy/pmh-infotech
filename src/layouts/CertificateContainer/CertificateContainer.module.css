@@ -1,0 +1,73 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 32px
+}
+
+.container__certificateWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate__title{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.5px;
+    color: #000;
+}
+
+.certificate__date{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    color: #979797;
+}
+
+.container__productWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 24px;
+    background-color: #FAFAFA;
+    border-left: 2px solid #004e94;
+}
+
+.product__title,
+.product__name {
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    font-size: 1rem;
+}
+
+.product__title{
+    line-height: 1.3rem;
+    color: #979797;
+}
+
+.product__name{
+    line-height: 1.15;
+    font-weight: 700;
+    color: #000;
+}
+
+.container__infoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    max-height: fit-content;
+    overflow: hidden;
+    column-gap: 57px;
+}
+
+@media (max-width: 1300px){
+    .container__infoGrid {
+        grid-template-columns: repeat(1, 1fr);
+        max-height: fit-content;
+    }
+}

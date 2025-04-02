@@ -1,0 +1,41 @@
+.compactList{
+    border-bottom: 1px solid rgba(116, 142, 180, .6);
+}
+
+.compactList__toolbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #004e94;
+    font-weight: 700;
+}
+
+.toolbar__pages {
+
+}
+
+.compactListItem{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgba(116, 142, 180, .6);
+    border-left: 1px solid rgba(116, 142, 180, .6);
+    border-right: 1px solid rgba(116, 142, 180, .6);
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+
+.titleWrapper{
+    background-color: #FAFAFA;
+    width: 30%;
+    padding: 11px 12px;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #979797;
+}
