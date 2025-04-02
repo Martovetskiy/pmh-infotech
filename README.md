@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/user/10da1549-bcdb-4af9-9da3-6acda43316a1/project/a3911eee-7f6a-490d-9e91-ce317134fdcc.svg)](https://wakatime.com/badge/user/10da1549-bcdb-4af9-9da3-6acda43316a1/project/a3911eee-7f6a-490d-9e91-ce317134fdcc)
+
 # Установка
 1. Клонирование репо 
     ```bash
