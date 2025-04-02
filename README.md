@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# Установка
+1. Клонирование репо 
+    ```bash
+    git clone <https://github.com/Martovetskiy/pmh-infotech.git>
+    cd pmh-infotech    
+    ```
+2. Установка зависимостей
+    ```bash
+   npm install
+    ```
+3. Запуск
+    ```bash
+    npm run dev
+   ```
+4. Замечание: Для работы web-приложения необходимо в корне проекта создать `.env` файл с ссылками на WebApi с приставкой VITE_. Примерное содержимое:
+    ```.env
+   VITE_URL_WEBAPI_CERT = "https://localhost:7007/api"
+    VITE_URL_WEBAPI_MAIN = "https://localhost:7298/api"
+    VITE_URL_WEBAPI_ADD = "https://localhost:7162/api" 
+   ```
+   
+# Структура проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* `src/` - исходный код приложения
+  * `components/` - React компоненты
+  * `layouts/` - компоненты-контейнеры и макеты страниц
+  * `model/` - типы и интерфейсы данных
+  * `store/` - веб-апи
+  * `lib/` - вспомогательные функции и утилиты
+  * `assets/` - статические ресурсы (изображения и т.д.)
 
-Currently, two official plugins are available:
+# Работа с данными
+Приложение использует React для управления состоянием и отображения данных. Данные, загружаются с 3 разных Web-API с использованием API-запросов (с помощью библиотеки `Axios`, которая указана в зависимостях).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Оптимизация запросов
+Для оптимизации запросов используется `REDIS` на стороне сервера для кэширования данных.
 
-## Expanding the ESLint configuration
+# Генерация PDF с QR-кодом
+Генерация PDF с QR-кодом
+Для генерации PDF-сертификатов с QR-кодом используется комбинация нескольких библиотек:
+1. `react-to-pdf` для преобразования React-компонентов в PDF.
+2. `qrcode.react` для генерации QR-кода.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Процесс создания PDF:
+1. Компонент `PdfComponent` содержит всю необходимую информацию для сертификата.
+2. QR-код генерируется с помощью `QRCodeSVG` и содержит URL для доступа к сертификату онлайн.
+3. При нажатии на кнопку "Скачать PDF-сертификат" в компоненте `Footer`, либо на кнопку "Скачать PDF" в компоненте `Header`, вызывается функция pdfAction, которая, использует `react-to-pdf` для создания PDF-файла.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Дополнительно
+1. Приложение использует `TypeScript` для статической типизации, что повышает надежность кода.
+2. Стили компонентов реализованы с использованием `CSS-модулей` для изоляции стилей.
+3. Для маршрутизации используется `react-router-dom`.
