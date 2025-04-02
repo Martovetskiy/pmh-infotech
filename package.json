@@ -11,15 +11,16 @@
   },
   "dependencies": {
     "axios": "^1.8.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "qrcode.react": "^4.2.0",
     "react-router-dom": "^7.4.0",
+    "react-to-pdf": "^2.0.0",
     "redis": "^4.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
+    "@types/node": "^22.13.17",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",

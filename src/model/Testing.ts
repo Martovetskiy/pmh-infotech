@@ -1,3 +1,6 @@
+import apiMainInfo from "../store/MainInfoStore.ts";
+import axios from "axios";
+
 export interface Testing {
     id: number; // № п/п
     meltNumber: number; //Primary
@@ -9,3 +12,18 @@ export interface Testing {
     edgeArea: number; // Отн. площадь ребра (FR)
     bending: string; // Изгиб
 }
+
+export const getTestingById = async (orderId: number): Promise<Testing[]> => {
+    try {
+        const response = await apiMainInfo.get<Testing[]>(`Orders/${orderId}/testings`);
+        return response.data
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.error('Ошибка при получении тестов:', error.response?.data);
+            throw new Error(`Ошибка при получении тестов: ${error.message}`); // Переправляем ошибку
+        } else {
+            console.error('Неизвестная ошибка:', error);
+            throw new Error('Неизвестная ошибка при получении тестов'); // Переправляем ошибку
+        }
+    }
+};

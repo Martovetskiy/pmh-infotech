@@ -1,3 +1,6 @@
+import apiMainInfo from "../store/MainInfoStore.ts";
+import axios from "axios";
+
 export interface Product {
     id: number; // № п/п
     positionNumber: number; // № позиции
@@ -13,3 +16,18 @@ export interface Product {
     netWeight: number; // Масса нетто, т
     grossWeight: number; // Масса брутто, т
 }
+
+export const getProductsById = async (orderId: number): Promise<Product[]> => {
+    try {
+        const response = await apiMainInfo.get<Product[]>(`Orders/${orderId}/products`);
+        return response.data
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.error('Ошибка при получении продуткы:', error.response?.data);
+            throw new Error(`Ошибка при получении продукты: ${error.message}`); // Переправляем ошибку
+        } else {
+            console.error('Неизвестная ошибка:', error);
+            throw new Error('Неизвестная ошибка при получении продкуты'); // Переправляем ошибку
+        }
+    }
+};

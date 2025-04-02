@@ -32,6 +32,10 @@
     border: none;
 }
 
+.download:hover{
+    cursor: pointer;
+}
+
 .download__text{
     display: inline;
     font-weight: 400;

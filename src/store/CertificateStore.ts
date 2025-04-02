@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://localhost:7007/api', // Замените на ваш базовый URL
-    timeout: 1000,
+    baseURL: import.meta.env.VITE_URL_WEBAPI_CERT,
+    timeout: 10000,
     // headers: {'X-Custom-Header': 'foobar'}
 });
 

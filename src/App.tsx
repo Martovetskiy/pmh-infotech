@@ -1,15 +1,18 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ClientInfoPage from './layouts/ClientInfoPage';
-import Header from "./components/Header/Header.tsx";
+import {NotFoundPage} from "./layouts/NotFoundPage/NotFoundPage.tsx";
 
 const App: React.FC = () => {
 
     return (
         <BrowserRouter>
-            <Header/>
             <Routes>
-                <Route path="/user/:uuid" element={<ClientInfoPage/>}/>
+                <Route path="/" element={<center style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
+                    ПРИВЕТ!!!
+                </center>}/>
+                <Route path="/user/:id" element={<ClientInfoPage/>}/>
+                <Route path="/404" element={<NotFoundPage/>}/>
             </Routes>
         </BrowserRouter>
     );
