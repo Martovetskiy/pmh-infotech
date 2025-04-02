@@ -32,7 +32,7 @@
 # Работа с данными
 Приложение использует React для управления состоянием и отображения данных. Данные, загружаются с 3 разных Web-API с использованием API-запросов (с помощью библиотеки `Axios`, которая указана в зависимостях).
 
-![Media](https://raw.githubusercontent.com/Martovetskiy/pmh-infotech/refs/heads/master/media/main.gif?token=GHSAT0AAAAAADA7L3SM2AFXU37BO6H6ATWEZ7NGSQQ)
+![Media](https://raw.githubusercontent.com/Martovetskiy/pmh-infotech/refs/heads/master/media/main.gif?raw=true)
 
 # Оптимизация запросов
 Для оптимизации запросов используется `REDIS` на стороне сервера для кэширования данных.
