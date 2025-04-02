@@ -38,6 +38,9 @@
 Для оптимизации запросов используется `REDIS` на стороне сервера для кэширования данных.
 
 # Генерация PDF с QR-кодом
+
+![Pdf](https://github.com/Martovetskiy/pmh-infotech/blob/master/media/pdf_work.gif?raw=true)
+
 Генерация PDF с QR-кодом
 Для генерации PDF-сертификатов с QR-кодом используется комбинация нескольких библиотек:
 1. `react-to-pdf` для преобразования React-компонентов в PDF.
