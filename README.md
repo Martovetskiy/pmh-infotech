@@ -36,6 +36,11 @@
 
 ![Media](https://raw.githubusercontent.com/Martovetskiy/pmh-infotech/refs/heads/master/media/main.gif?raw=true)
 
+### Навигация
+* `/` - Страница приветсвия
+* `/user/{id}` - Страница просмотра сертификата с параметром id
+* `/404` - Страница обозначающая что сертификат не найден или прочие ошибки
+
 # Оптимизация запросов
 Для оптимизации запросов используется `REDIS` на стороне сервера для кэширования данных.
 
@@ -43,7 +48,7 @@
 
 ![Pdf](https://github.com/Martovetskiy/pmh-infotech/blob/master/media/pdf_work.gif?raw=true)
 
-Генерация PDF с QR-кодом
+### Генерация PDF с QR-кодом
 Для генерации PDF-сертификатов с QR-кодом используется комбинация нескольких библиотек:
 1. `react-to-pdf` для преобразования React-компонентов в PDF.
 2. `qrcode.react` для генерации QR-кода.
