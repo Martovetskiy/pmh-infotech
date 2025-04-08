@@ -39,3 +39,17 @@
     font-size: 1.2rem;
     color: #979797;
 }
+
+@media (max-width: 500px) {
+    .titleWrapper{
+        width: 40%
+    }
+
+    .title{
+        font-size: 1.1rem;
+    }
+
+    .compactListItem{
+        font-size: 1.1rem;
+    }
+}

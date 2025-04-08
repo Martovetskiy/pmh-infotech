@@ -10,7 +10,7 @@ export const GridItem: React.FC<GridItemProps> = ({keyV, value}) =>{
     return (
         <div className={styles.container}>
             <span className={styles.container__key}>{keyV}</span>
-            <span className="container__value">{value}</span>
+            <span className={styles.container__value}>{value}</span>
         </div>
     )
 }

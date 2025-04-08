@@ -23,7 +23,7 @@ interface PdfComponentProps{
 export const PdfComponent:React.FC<PdfComponentProps> = ({certificate, batches, testings, products, analyzes, addInfo, url}) => {
     console.log(url);
     return (
-        <>
+        <div style={{width:"1200px", gap: "10px", margin: "10px", height:"fit-content", display:"flex", flexDirection:"column", justifyContent:"center", alignItems: 'center'}}>
             <QRCodeSVG value={url} />
             <CertificateContainer certificate={certificate}/>
             <TableView fields = {[
@@ -153,6 +153,6 @@ export const PdfComponent:React.FC<PdfComponentProps> = ({certificate, batches, 
                 ))}
             </TableView>
             <AdditionalInfoContainer data={addInfo}/>
-        </>
+        </div>
     )
 }

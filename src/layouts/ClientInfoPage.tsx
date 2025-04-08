@@ -365,7 +365,7 @@ const ClientInfoPage: React.FC = () => {
                 <AdditionalInfoContainer data={addInfo}/>
             </div>
             <Footer pdfAction={handlePdfDownload}/>
-            <div ref={targetRef} style={{ top: "-9999px", position: "absolute", zIndex: -1, display: pdfComponentDisplay === "block" ? "block" : "none" }}>
+            <div ref={targetRef} style={{top: "-9999px", position: "absolute", zIndex: 1, display: pdfComponentDisplay === "block" ? "block" : "none", width: "fit-content", height:'fit-content'}}>
                 <PdfComponent
                     url={`${window.location.protocol}//${window.location.host}${location.pathname}`}
                     certificate={certificate} batches={batches} analyzes={analyzes} testings={testings} products={products} addInfo={addInfo}/>

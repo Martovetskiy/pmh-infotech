@@ -9,8 +9,6 @@
 
 .container__key,
 .container__value {
-    word-wrap: break-word;
-    word-break: break-word;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
@@ -39,5 +37,5 @@
     -ms-flex-negative: 0;
     flex-shrink: 0;
     text-align: right;
-    font-size: 1.05rem;
+    font-size: 1rem;
 }

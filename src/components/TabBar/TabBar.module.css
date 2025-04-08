@@ -44,3 +44,14 @@
        width: 100%;
     }
 }
+
+@media (max-width: 500px) {
+    .tabBar__tabs{
+       width: 100%;
+        flex-direction: column;
+    }
+
+    .tab{
+        border: none;
+    }
+}
