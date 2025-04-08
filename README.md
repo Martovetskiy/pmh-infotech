@@ -63,3 +63,8 @@
 1. Приложение использует `TypeScript` для статической типизации, что повышает надежность кода.
 2. Стили компонентов реализованы с использованием `CSS-модулей` для изоляции стилей.
 3. Для маршрутизации используется `react-router-dom`.
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Martovetskiy/pmh-infotech&type=Date)](https://www.star-history.com/#Martovetskiy/pmh-infotech&Date)
