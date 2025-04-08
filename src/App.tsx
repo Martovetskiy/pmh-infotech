@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ClientInfoPage from './layouts/ClientInfoPage';
 import {NotFoundPage} from "./layouts/NotFoundPage/NotFoundPage.tsx";
+import {NotFoundClient} from "./layouts/NotFoundClient/NotFoundClient.tsx";
 
 const App: React.FC = () => {
 
@@ -12,7 +13,11 @@ const App: React.FC = () => {
                     ПРИВЕТ!!!
                 </center>}/>
                 <Route path="/user/:id" element={<ClientInfoPage/>}/>
-                <Route path="/404" element={<NotFoundPage/>}/>
+                <Route path="/NotFoundCertificate/:id" element={<NotFoundClient/>}/>
+                <Route
+                    path="*"
+                    element={<NotFoundPage />}
+                />
             </Routes>
         </BrowserRouter>
     );

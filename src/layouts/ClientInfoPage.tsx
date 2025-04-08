@@ -55,7 +55,7 @@ const ClientInfoPage: React.FC = () => {
                 })
             .catch((error)=> {
                 console.error(error)
-                navigate(`/404`, { replace: false })
+                navigate(`/NotFoundCertificate/${id}`, { replace: false })
             })
             .finally(() => setLoading(false)
             )
