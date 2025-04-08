@@ -9,7 +9,7 @@
 }
 
 .text_404 {
-    font-family: "Consolas", cursive;
+    font-family: "Consolas", sans-serif;
     font-size: 10em;
     box-sizing: border-box;
     color: #004e94;
@@ -17,7 +17,7 @@
 }
 
 .text_lost {
-    font-family: "Consolas", cursive;
+    font-family: "Consolas", sans-serif;
     font-size: 2em;
     /*line-height: 50px;*/
     box-sizing: border-box;
