@@ -10,7 +10,7 @@ const App: React.FC = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<center style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
-                    ПРИВЕТ!!!
+                    ГЛАВНАЯ СТРАНИЦА
                 </center>}/>
                 <Route path="/user/:id" element={<ClientInfoPage/>}/>
                 <Route path="/NotFoundCertificate/:id" element={<NotFoundClient/>}/>
